@@ -1,0 +1,3 @@
+CREATE DATABASE ECommerce_Order_Analysis;
+
+USE ECommerce_Order_Analysis;
