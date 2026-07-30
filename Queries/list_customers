@@ -1,0 +1,9 @@
+-- List customers who placed more than one order.
+
+SELECT c.name,
+       COUNT(o.order_id) AS order_count
+FROM customers c
+JOIN orders o
+ON c.customer_id = o.customer_id
+GROUP BY c.name
+HAVING order_count > 1;

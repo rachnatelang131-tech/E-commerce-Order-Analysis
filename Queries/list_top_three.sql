@@ -1,0 +1,10 @@
+-- List top 3 best-selling products based on quantity sold
+
+SELECT p.product_name,
+       SUM(oi.quantity) AS total_quantity_sold
+FROM products p
+JOIN order_items oi
+ON p.product_id = oi.product_id
+GROUP BY p.product_name
+ORDER BY total_quantity_sold DESC
+LIMIT 3;
